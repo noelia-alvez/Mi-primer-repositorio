@@ -140,7 +140,7 @@ a.custom-card:hover {
   color: orange;
 }
 
-#boton {
+.boton {
   background: #495057;
   width:400px;
   height: 50px;
@@ -154,7 +154,7 @@ a.custom-card:hover {
   font-size: x-large;
   color: whitesmoke;
 }
-  #boton:hover {
+  .boton:hover {
     background-color: #495057d9;
     color: #eee7e7;
   }
