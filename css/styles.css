@@ -141,40 +141,72 @@ a.custom-card:hover {
 }
 
 #boton {
-  background: #057059;
+  background: #495057;
   width:400px;
   height: 50px;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
-  -webkit-box-shadow: 6px 5px 24px #666666;
-  -moz-box-shadow: 6px 5px 24px #666666;
-  box-shadow: 6px 5px 24px #666666;
+  -webkit-box-shadow: 6px 5px 24px #eee7e7;
+  -moz-box-shadow: 6px 5px 24px #eee7e7;
+  box-shadow: 6px 5px 24px #eee7e7;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: x-large;
   color: whitesmoke;
 }
   #boton:hover {
-    background-color: white;
-    color: rgb(7, 7, 7);
+    background-color: #495057d9;
+    color: #eee7e7;
   }
+.menu {
+    background: #495057;
+    width: 259px;
+    height: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    color: whitesmoke;
+    border-radius: 10px;
+    border-color: white;
+    margin-left: 0px;
+    margin-bottom: 10px;
 
-  #borrar {
-    background: #5b5e5d;
-  width:200px;
-  height: 40px;
+  }
+.menu:hover {
+    background-color: #495057d9;
+    color: whitesmoke;
+  }
+#persona {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    color: whitesmoke;
+    text-align: center;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    -webkit-box-shadow: 6px 5px 24px #eee7e7;
+    -moz-box-shadow: 6px 5px 24px #eee7e7;
+    box-shadow: 6px 5px 24px #eee7e7;
+    margin-bottom: 30px;
+}
+.seleccion {
+  text-align: center;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
-  -webkit-box-shadow: 6px 5px 24px #666666;
-  -moz-box-shadow: 6px 5px 24px #666666;
-  box-shadow: 6px 5px 24px #666666;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: x-large;
-  color: whitesmoke;
-  }
-  #borrar:hover {
-    background-color: rgb(151, 151, 151);
-    color: whitesmoke;
-  }
+  -webkit-box-shadow: 6px 5px 24px #eee7e7;
+   -moz-box-shadow: 6px 5px 24px #eee7e7;
+   box-shadow: 6px 5px 24px #eee7e7;
+   margin:5px;
+}
+.busca input {
+  height: 42px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  text-shadow: 1px 1px 1px grey;
+  width: 56%;
+  padding-top: 6px;
+  display: flex;
+  margin: 10px 360px 2px 320px;
+  
+}
 
