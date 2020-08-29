@@ -6,34 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>eMercado - Todo lo que busques está aquí</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <script src="js/login.js"></script>
+    <link href="css/barra.css" rel="stylesheet">
     <script>inicio()</script>
 
   </head>
   <body>
-    
-    <nav class="site-header sticky-top py-1 bg-dark">
-      <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-        <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-        <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-        <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-        <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-        <button id="borrar">CERRAR SESIÓN</button>
+    <div id="sidebar" class="site-header sticky-top py-1 bg-dark">
+    <div class="toggle-btn">
+      <span style= "color: #495057">&#9776</span>
+    </div>
+    <h2 style="text-align: center; color: white">Hola!</h2>
+    <ul >
+      <ol id="persona"> 
         <script>
-          document.getElementById("borrar").onclick = function () {
-           sessionStorage.setItem("contador", 0);
-            window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
+          document.write(localStorage.getItem("email"))  // obtengo el dato almacenado en localstorage y lo muestro en pantalla
+        </script>
+      </ol>
+      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a></ol>
+      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a></ol>
+      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a></ol>
+      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a></ol>
+      <ol class="seleccion" style= "margin-bottom: 320px;"><a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a></ol>
+      <button class="menu" onclick="profile()">Mi Perfil
+        <script>
+          function profile() {
+          window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/my-profile.html";
           }
         </script>
-      </div>
-    </nav>
+      </button>
+      <button id="borrar" class="menu">Cerrar Sesión</button>
+      <script>
+        document.getElementById("borrar").onclick = function () {
+         sessionStorage.setItem("contador", 0);
+          window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
+        }
+    
+      </script>
+    </ul>
+</div>
     <main role="main">
       <section class="jumbotron text-center">
         <div class="m-5">
@@ -113,6 +128,8 @@
         <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
       </div>
     </footer>
+    <script src="js/login.js"></script>
+    <script src="js/barra.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
