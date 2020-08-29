@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <title>eMercado - Todo lo que busques está aquí</title>
-
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/barra.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" 
+    crossorigin="anonymous">
     <script>
       if(sessionStorage.getItem("contador") == 0 || sessionStorage.getItem("contador") == null){
         window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
@@ -19,26 +22,90 @@
     </script>
   </head>
   <body>
-    <nav class="site-header sticky-top py-1 bg-dark">
-      <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a>
-        <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
-        <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
-        <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-        <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
-        <button id="borrar">CERRAR SESIÓN</button>
+    <div id="sidebar" class="site-header sticky-top py-1 bg-dark">
+    <div class="toggle-btn">
+      <span style= "color: #495057">&#9776</span>
+    </div>
+    <h2 style="text-align: center; color: white">Hola!</h2>
+    <ul >
+      <ol id="persona"> 
         <script>
-          document.getElementById("borrar").onclick = function () {
-           sessionStorage.setItem("contador", 0);
-            window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
+          document.write(localStorage.getItem("email"))  // obtengo el dato almacenado en localstorage y lo muestro en pantalla
+        </script>
+      </ol>
+      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a></ol>
+      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a></ol>
+      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a></ol>
+      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a></ol>
+      <ol class="seleccion" style= "margin-bottom: 320px;"><a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a></ol>
+      <button class="menu" onclick="profile()">Mi Perfil
+        <script>
+          function profile() {
+          window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/my-profile.html";
           }
         </script>
+      </button>
+      <button id="borrar" class="menu">Cerrar Sesión</button>
+      <script>
+        document.getElementById("borrar").onclick = function () {
+         sessionStorage.setItem("contador", 0);
+          window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
+        }
+    
+      </script>
+    </ul>
+</div>
+    <main role="main" class="pb-5">
+  
+
+    <div class="text-center p-4">
+        <h2>Listado</h2>
+    </div>
+    <div class="container">
+      <div class="row">            
+          <div class="col text-right">
+              <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+                  <label class="btn btn-light active" id="sortAsc" >
+                      <input type="radio" name="options" autocomplete="off" checked><i class="fas fa-sort-amount-up mr-1"></i>$
+                  </label>
+                  <label class="btn btn-light" id="sortDesc" >
+                      <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>$
+                  </label>
+                  <label class="btn btn-light" id="sortByCount" >
+                      <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Relevancia
+                  </label>
+              </div>
+          </div>
       </div>
-    </nav>
+      <div class="row justify-content-end">
+        <div class="col-md-6"></div>
+          <div class="col-md-6 col-sm-12 mb-1 container">
+            <div class="row container p-0 m-0">
+              <div class="col">
+                <p class="font-weight-normal text-right my-2">Precio</p>
+              </div>
+              <div class="col">
+                <input class="form-control" type="number" placeholder="min." id="rangeFilterCostMin">
+              </div>
+              <div class="col">
+                <input class="form-control" type="number" placeholder="máx." id="rangeFilterCostMax">
+              </div>
+              <div class="col-3 p-0">
+                <div class="btn-group" role="group">
+                  <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                  <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div>
+    
     <div class="container p-5">
       <div class="text-center p-4">
         <h2>Listado</h2>
     </div>
+      
     <div class="container">
         <div class="row">
             <div class="list-group" id="cat-list-container">
@@ -57,6 +124,7 @@
     </footer>
     <div id="spinner-wrapper"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/barra.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script src="js/products.js"></script>
