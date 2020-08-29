@@ -16,9 +16,11 @@ function showProductsList(array){
                 <div class="col">
                     <div class="d-flex w-100 justify-content-between">
                         <h4 class="mb-1">`+ products.name +`</h4>
-                            <p class="mb-1">` + products.soldCount + `</p>
-                            <p class="mb-1">` + products.cost + ` ` + products.currency + `</p>
-                            
+                            <ul>
+                                <ol class="mb-1">` + products.cost + ` ` + products.currency + `</ol>
+                                <ol class="mb-1">` + products.soldCount + ` vendidos</ol>
+                                
+                            </ul>
                     </div>
                      <p> ` + products.description + `<p>
 
@@ -108,8 +110,11 @@ function showProductsList(){
                         <div class="col">
                             <div class="d-flex w-100 justify-content-between">
                                 <h4 class="mb-1">`+ products.name +`</h4>
-                                    <p class="mb-1">` + products.soldCount + `</p>
-                                    <p class="mb-1">` + products.cost + ` ` + products.currency + `</p>
+                                    <ul>
+                                        <ol class="mb-1">` + products.cost + ` ` + products.currency + `</ol>
+                                        <ol class="mb-1">` + products.soldCount + ` vendidos</ol>
+                                
+                                    </ul>
                                     
                             </div>
                              <p> ` + products.description + `<p>
