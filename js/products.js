@@ -102,7 +102,7 @@ function showProductsList(){
         ){
 // se modifica htmlContentToAppend para que coincida con LISTADO de productos
                 htmlContentToAppend += `
-                <div class="list-group-item list-group-item-action">
+                <a href="https://noelia-alvez.github.io/mi-primer-repositorio/product-info.html" class="list-group-item list-group-item-action">
                     <div class="row">
                         <div class="col-3">
                             <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
@@ -121,7 +121,7 @@ function showProductsList(){
         
                         </div>
                     </div>
-                </div>
+                </a>
                 `
         }
 
