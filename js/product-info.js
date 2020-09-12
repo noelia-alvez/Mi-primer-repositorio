@@ -99,7 +99,7 @@ function showComments(comm){
         htmlContentToAppendCom += `
             <div class="list-group-item list-group-item-action">
                         <div>
-                            <p class="mb-1" style="text-align: left"><img src="img/logo.jpg">Usuario: ` + comment.user + ` </p>
+                            <p class="mb-1" style="text-align: left"><img src="img/logo2.png">Usuario: ` + comment.user + ` </p>
                             <p class="mb-1" style="text-align: left">Fecha: ` + comment.dateTime + ` horas</p>
                         </div>
                         
