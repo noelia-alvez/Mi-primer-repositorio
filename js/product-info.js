@@ -1,5 +1,5 @@
 var products = {};
-var prodRel = [];
+var prodRel = document.getElementById("productImagesGalleryRel");
 
 function showImagesGallery(array){
 
