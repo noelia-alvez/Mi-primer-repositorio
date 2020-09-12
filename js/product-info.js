@@ -1,5 +1,5 @@
 var products = {};
-var prodRel = document.getElementById("productImagesGalleryRel");
+var prodRel = [];
 
 function showImagesGallery(array){
 
@@ -19,35 +19,6 @@ function showImagesGallery(array){
     }
 }
 
-//Función que se ejecuta una vez que se haya lanzado el evento de
-//que el documento se encuentra cargado, es decir, se encuentran todos los
-//elementos HTML presentes.
-            
-document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
-        if (resultObj.status === "ok") {
-            product = resultObj.data;
-
-            let productNameHTML  = document.getElementById("productName");
-            let productDescriptionHTML = document.getElementById("productDescription");
-            let productSoldCount = document.getElementById("productSoldCount");
-            let productCategory =document.getElementById("productCategory")
-            let prodMonedaPrecio = document.getElementById("productMonedaPrecio");
-        
-            productNameHTML.innerHTML = product.name;
-            productDescriptionHTML.innerHTML = product.description;
-            productSoldCount.innerHTML = product.soldCount;
-            prodMonedaPrecio.innerHTML = product.currency + " " + product.cost
-            productCategory.innerHTML = product.category;
-            prodRel = product.relatedProducts;
-
-            //Muestro las imagenes en forma de galería
-            showImagesGallery(product.images);
-        }
-    });
-});
-
-
 function showImagesGalleryRel(prodAll){
 
     let htmlContentToAppendRel = "";
@@ -66,18 +37,6 @@ function showImagesGalleryRel(prodAll){
            document.getElementById("productImagesGalleryRel").innerHTML = htmlContentToAppendRel;
         }
 }
-
-document.addEventListener("DOMContentLoaded", function(e){
-    getJSONData(PRODUCTS_URL).then(function(resultObj){
-        if (resultObj.status === "ok"){
-            products = resultObj.data;
-            let prodRelacionados = document.getElementById("productImagesGalleryRel");
-            prodRelacionados.innerHTML = products.imgSrc;
-            showImagesGalleryRel(products);
-        }
-    });
-});
-
 
 function showComments(comm){
 
@@ -111,6 +70,44 @@ function showComments(comm){
         document.getElementById("productComments").innerHTML = htmlContentToAppendCom;
         }
 }
+
+//Función que se ejecuta una vez que se haya lanzado el evento de
+//que el documento se encuentra cargado, es decir, se encuentran todos los
+//elementos HTML presentes.          
+document.addEventListener("DOMContentLoaded", function(e){
+    getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
+        if (resultObj.status === "ok") {
+            product = resultObj.data;
+
+            let productNameHTML  = document.getElementById("productName");
+            let productDescriptionHTML = document.getElementById("productDescription");
+            let productSoldCount = document.getElementById("productSoldCount");
+            let productCategory =document.getElementById("productCategory")
+            let prodMonedaPrecio = document.getElementById("productMonedaPrecio");
+        
+            productNameHTML.innerHTML = product.name;
+            productDescriptionHTML.innerHTML = product.description;
+            productSoldCount.innerHTML = product.soldCount;
+            prodMonedaPrecio.innerHTML = product.currency + " " + product.cost
+            productCategory.innerHTML = product.category;
+            prodRel = product.relatedProducts;
+
+            //Muestro las imagenes en forma de galería
+            showImagesGallery(product.images);
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function(e){
+    getJSONData(PRODUCTS_URL).then(function(resultObj){
+        if (resultObj.status === "ok"){
+            products = resultObj.data;
+            let prodRelacionados = document.getElementById("productImagesGalleryRel");
+            prodRelacionados.innerHTML = products.imgSrc;
+            showImagesGalleryRel(products);
+        }
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function(e){
     getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
