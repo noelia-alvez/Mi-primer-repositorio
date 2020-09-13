@@ -51,7 +51,7 @@ function showComments(comm){
         for (var a = 0; a < userScore; a++ ) {
             starRating += '<i class="fas fa-star checked"></i>'
         }
-        for (var b = userScore + 1 ; b < 6; b++ ){
+        for (var b = userScore; b < 5; b++ ){
             starRating += '<i class="fas fa-star"></i>'
         }
 
