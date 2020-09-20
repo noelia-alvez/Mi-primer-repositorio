@@ -125,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function(e){
             //Muestro las imagenes en forma de galería
             showImagesGallery(product.images);
         }
-    }
     getJSONData(PRODUCTS_URL).then(function(resultObj){
          if (resultObj.status === "ok"){
             products = resultObj.data;
