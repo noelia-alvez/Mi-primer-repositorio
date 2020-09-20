@@ -1,14 +1,9 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    
-  }
-  
+ 
   #sidebar {
     position: fixed;
     width: 260px;
     height: 100%;
-    background: #495057be;
+    background: #032946;
     right: -260px;
     transition: all 250ms linear;
     
@@ -20,7 +15,7 @@
   }
   
   #sidebar ul li {
-    color: #495057;
+    color: #032946;
     border-radius: 30px;
     padding: auto;
     text-align: center;
@@ -43,4 +38,12 @@
     font-size: 25px;
     border: 2px solid whitesmoke;
 
+  }
+
+  .imgSidebar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: fixed;
+    margin-left: 5%;
   }
