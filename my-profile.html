@@ -36,38 +36,40 @@
 </head>
 
 <body>
-  <div id="sidebar" class="site-header sticky-top py-1 bg-dark">
+  <div id="sidebar" class="site-header sticky-top py-1">
     <div class="toggle-btn">
-      <span style= "color: #495057">&#9776</span>
+      <span style= "color: rgb(80, 78, 78)">&#9776</span>
     </div>
-    <h2 style="text-align: center; color: white">Hola!</h2>
-    <ul >
-      <ol id="persona"> 
-        <script>
-          document.write(localStorage.getItem("email"))  // obtengo el dato almacenado en localstorage y lo muestro en pantalla
-        </script>
-      </ol>
-      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a></ol>
-      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a></ol>
-      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a></ol>
-      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a></ol>
-      <ol class="seleccion" style= "margin-bottom: 320px;"><a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a></ol>
-      <button class="menu" onclick="profile()">Mi Perfil
-        <script>
-          function profile() {
-          window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/my-profile.html";
-          }
-        </script>
-      </button>
-      <button id="borrar" class="menu">Cerrar Sesión</button>
-      <script>
-        document.getElementById("borrar").onclick = function () {
-         sessionStorage.setItem("contador", 0);
-          window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
-        }
-    
-      </script>
-    </ul>
+    <img src="img/shopping-online.jpg" class="imgSidebar">
+   
+    <h2 style="text-align: center; color: white; margin-top: 100px;">Bienvenido!</h2>
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" style="margin-bottom: 360px;" aria-haspopup="true" aria-expanded="false">
+          <script>
+            document.write(localStorage.getItem("email"))  // obtengo el dato almacenado en localstorage y lo muestro en pantalla
+          </script>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+          <a class="dropdown-item" href="cart.html">Mi carrito</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="login.html" id="borrar">Cerrar Sesión
+            <script>
+              document.getElementById("borrar").onclick = function () {
+               sessionStorage.setItem("contador", 0);
+                window.location.href="login.html";
+              }
+          
+            </script>
+          </a>
+        </div>
+      </div>
+     
+      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='index.html'">Inicio</button>
+      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='categories.html'">Categorías</button>
+      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='products.html'">Productos</button>
+      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='sell.html'">Vender</button>
+      </div>
 </div>
   <div class="container p-5">
     <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
