@@ -211,7 +211,7 @@ a.custom-card:hover {
   text-shadow: 1px 1px 1px grey;
   width: 30%;
   display: flex;
-  margin: 3px 500px 0px 500px;
+  margin:0px 500px 0px 500px;
   
 }
 
