@@ -12,56 +12,29 @@
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <style>
-    html, body{
-      height: 100%;
-    }
-
-    body {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-      align-items: center;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      background-color: #f5f5f5;
-    }
-
-    .signin {
-      width: 100%;
-      max-width: 400px;
-      padding: 15px;
-      margin: auto;
-      border-color:#495057;
-    }
-
-    #img {
-      width: 400px;
-      height: 200px;
-    }
-  </style>
+  
 </head>
 
 <body class="text-center">
   
-  <div class="container p-5">
+  <div class="login-box">
+    <img src="img/shopping-online.jpg" class="avatar" alt="Avatar Image">
     
-
-    <form action="https://noelia-alvez.github.io/mi-primer-repositorio/index.html" onsubmit="sumar();">
+    <h3>Bienvenido!</h3>
+    <form action="index.html" onsubmit="sumar();">
       
-      <img src="img/login.png" id="img" alt="error al cargar la imágen"  >
       <br>
       <br>
       
       <label for="inputEmail"></label>
-      <input type="email" class="signin" id="inputEmail" placeholder="Ingrese su correo electrónico" required>
+      <input type="email" id="inputEmail" placeholder="Ingrese su correo electrónico" required>
       <br>
       <br>
       <label for="inputPassword"></label>
-      <input type="password" class="signin" id="inputPassword" placeholder="Ingrese su contraseña" required>
+      <input type="password" id="inputPassword" placeholder="Ingrese su contraseña" required>
       <br>
       <br>
-      <input type="submit" class="boton" value="INGRESAR" onclick="store()">
+      <input type="submit" value="INGRESAR" onclick="store()">
       <script>
         function store() {
           var usuario= document.getElementById("inputEmail")
