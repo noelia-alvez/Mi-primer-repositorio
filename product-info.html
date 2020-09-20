@@ -24,83 +24,89 @@
 </head>
 
 <body>
-  <div id="sidebar" class="site-header sticky-top py-1 bg-dark">
+  <div id="sidebar" class="site-header sticky-top py-1">
     <div class="toggle-btn">
-      <span style= "color: #495057">&#9776</span>
+      <span style= "color: rgb(80, 78, 78)">&#9776</span>
     </div>
-    <h2 style="text-align: center; color: white">Hola!</h2>
-    <ul >
-      <ol id="persona"> 
-        <script>
-          document.write(localStorage.getItem("email"))  // obtengo el dato almacenado en localstorage y lo muestro en pantalla
-        </script>
-      </ol>
-      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="index.html">Inicio</a></ol>
-      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a></ol>
-      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a></ol>
-      <ol class="seleccion"><a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a></ol>
-      <ol class="seleccion" style= "margin-bottom: 320px;"><a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a></ol>
-      <button class="menu" onclick="profile()">Mi Perfil
-        <script>
-          function profile() {
-          window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/my-profile.html";
-          }
-        </script>
-      </button>
-      <button id="borrar" class="menu">Cerrar Sesión</button>
-      <script>
-        document.getElementById("borrar").onclick = function () {
-         sessionStorage.setItem("contador", 0);
-          window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
-        }
-    
-      </script>
-    </ul>
+    <img src="img/shopping-online.jpg" class="imgSidebar">
+   
+    <h2 style="text-align: center; color: white; margin-top: 100px;">Bienvenido!</h2>
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" style="margin-bottom: 360px;" aria-haspopup="true" aria-expanded="false">
+          <script>
+            document.write(localStorage.getItem("email"))  // obtengo el dato almacenado en localstorage y lo muestro en pantalla
+          </script>
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+          <a class="dropdown-item" href="cart.html">Mi carrito</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="login.html" id="borrar">Cerrar Sesión
+            <script>
+              document.getElementById("borrar").onclick = function () {
+               sessionStorage.setItem("contador", 0);
+                window.location.href="login.html";
+              }
+          
+            </script>
+          </a>
+        </div>
+      </div>
+     
+      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='index.html'">Inicio</button>
+      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='categories.html'">Categorías</button>
+      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='products.html'">Productos</button>
+      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='sell.html'">Vender</button>
+      </div>
 </div>
   <main role="main">
     <div class="container mt-5">
       <div class="text-center p-4">
         <h2>Descripción del producto</h2>
         <p class="lead">Encontrarás aquí toda la información del producto seleccionado.</p>
-        <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea la categoría
-         seleccionada previamente, siempre se visualizará la presente: <strong>Autos</strong>.</p>
+        <p class="small alert-warning py-3"><strong>Nota: </strong>por simplicidad, cualquiera sea el producto
+         seleccionado previamente, siempre se visualizará el siguiente: <strong>Chevrolet Onix Joy</strong>.</p>
     </div>
-    <h3 id="productName"></h3>
+    <h2 id="productName"></h2>
     <hr class="my-3">
+
+    <dt></dt>
+    <dd>
+      <div style="margin-top: 10px;" id="carouselExampleIndicators" class="carousel slide">
+      </div>
+    </dd>
+
     <dl>
-      <dt>Descripción</dt>
+      <p>Descripción</p>
       <dd>
-        <p id="productDescription"></p>
+        <p style="text-align: justify;" id="productDescription"></p>
       </dd>
 
-      <dt>Costo del producto</dt>
+      <p>Costo del producto</p>
       <dd>
         <p id="productMonedaPrecio"></p>
       </dd>
 
-      <dt>Cantidad de vendidos</dt>
+      <p>Cantidad de vendidos</p>
       <dd>
         <p id="productSoldCount"></p>
       </dd>
 
-      <dt>Categoría del producto</dt>
+      <p>Categoría del producto</p>
       <dd>
         <a href="category-info.html" id="productCategory"></a>
       </dd>
 
-      <dt>Imágenes ilustrativas</dt>
-      <dd>
-        <div class="row text-center text-lg-left pt-2" id="productImagesGallery">
-        </div>
-      </dd>
-
-      <dt>Productos relacionados</dt>
+      <br>
+      <hr class="my-3">
+      
+      <p>Productos relacionados</p>
       <dd>
         <div class="row text-center text-lg-left pt-2" id="productImagesGalleryRel">
         </div>
       </dd>
 
-      <dt>Comentarios</dt>
+      <p>Comentarios</p>
       <dd>
         <div class="row text-center text-lg-left pt-2" id="productComments">
         </div>
@@ -110,7 +116,7 @@
     <div class="container mt-5">
     <form>
       <label>
-        <h3><b>Agregar un nuevo comentario:</b></h3>
+        <p><b>Agregar un nuevo comentario:</b></p>
       </label>
       <br>
       <label>
@@ -128,7 +134,7 @@
       </p>
       <br>
       <label>
-        <input type="submit" class="boton" value="Agregar comentario" id="agregar">
+        <input style="margin-bottom: 20px;" type="submit" class="boton" value="Agregar comentario" id="agregar">
       </label>
     </form>
   </div>
