@@ -200,6 +200,10 @@ a.custom-card:hover {
    cursor: pointer;
 }
 
+.busca {
+    margin-top: 0px;
+}
+
 .busca input {
   height: 60px;
   background-color: whitesmoke;
