@@ -141,7 +141,7 @@ a.custom-card:hover {
 }
 
 .boton {
-  background: #495057;
+  background: #032946;
   width:400px;
   height: 50px;
   -webkit-border-radius: 28;
@@ -155,24 +155,24 @@ a.custom-card:hover {
   color: whitesmoke;
 }
   .boton:hover {
-    background-color: #495057d9;
+    background-color: #144366;
     color: #eee7e7;
   }
 .menu {
-    background: #495057;
-    width: 259px;
+    background: #032946;
+    width: 239px;
     height: 40px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: large;
     color: whitesmoke;
     border-radius: 10px;
     border-color: white;
-    margin-left: 0px;
+    margin-left: 10px;
     margin-bottom: 10px;
 
   }
 .menu:hover {
-    background-color: #495057d9;
+    background-color: #144366;
     color: whitesmoke;
   }
 #persona {
@@ -197,16 +197,23 @@ a.custom-card:hover {
    -moz-box-shadow: 6px 5px 24px #eee7e7;
    box-shadow: 6px 5px 24px #eee7e7;
    margin:5px;
+   cursor: pointer;
 }
+
 .busca input {
-  height: 42px;
+  height: 56px;
   background-color: whitesmoke;
   border-radius: 10px;
   text-shadow: 1px 1px 1px grey;
-  width: 56%;
-  padding-top: 6px;
+  width: 30%;
   display: flex;
-  margin: 10px 360px 2px 320px;
+  margin: 10px 500px 0px 500px;
   
 }
 
+.slide {
+  max-width: 50%;
+  max-height: 50%;
+  margin-left: 15px;
+  float: right;
+}
