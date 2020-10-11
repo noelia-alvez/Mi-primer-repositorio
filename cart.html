@@ -75,14 +75,102 @@
       <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='sell.html'">Vender</button>
       </div>
 </div>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+  <div class="container mt-5">
+<div class="text-center p-4">
+  <h2>Carrito de compras</h2>
+</div>
+<form onsubmit=compra();>
+<table class="table">
+  <thead>
+  <tr>
+  <th scope="col">Producto</th>
+  <th scope="col" id="name">Nombre</th>
+  <th scope="col" id="cost">Costo</th>
+  <th scope="col" id="count">Cantidad</th>
+  <th scope="col" id="subtTot">Subtotal</th>
+  </tr>
+  </thead>
+  
+ <tbody id="articlesWrapper">
+   <td></td>
+   <td headers="nombre name"></td>
+   <td headers="costo cost"></td>
+   <td headers="cantidad count"></td> 
+   <td headers="subtotal subtTot"></td>  
+  </tbody>
+ </table>
+ 
+ <hr class="my-6">
+<div class="d-block my-3">
+  <h3>Tipo de envío</h3>
+      
+  <label>
+    <input type="radio" name="envio" id="premium" required> Premium 2 a 5 días (15%)
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="envio" id="express" required> Express 5 a 8 días (7%)
+  </label>
+  <br>
+  <label>
+    <input type="radio" name="envio" id="standard" required> Standard 12 a 15 días (5%)
+  </label>
+</div>
+<hr class="my-6"> 
+<div class="d-block my-3">
+
+  <h3>Dirección de envío</h3>
+       
+  <label><p>Calle</p>
+    <input type="text" name="dire" required> 
+  </label>
+  <br>
+  <label><p>Número</p>
+    <input type="text" name="dire" required> 
+  </label>
+  <br>
+  <label><p>Esquina</p>
+    <input type="text" name="dire" required> 
+  </label>
+</div>
+   
+  <hr class="my-6"> 
+  <table class="table">
+   <h3>Costos</h3>
+   <tr>
+   <th scope="col">Subtotal</th>
+   <th scope="col">Costo de envío</th>
+   <th scope="col">Total</th>
+   </tr>
+
+  <tbody>
+    <td id="subTotal2"></td>
+    <td id="cDeEnvio"></td> 
+    <td id="total"></td>  
+  </tbody>
+  </table>
+
+  <hr class="my-6"> 
+  <h3>Forma de pago</h3>
+  <p>no ha seleccionado <a href="#">Seleccionar</a></p>
+  <br>
+  <input class="login-box" type="submit" value="Finalizar compra">
+  <script>
+    function compra() {
+      alert("Has comprado con éxito!");
+    }
+  </script>
+</div>
+</form>
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Volver arriba</a>
+    </p>
+    <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+    <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
   </div>
+</footer>
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
