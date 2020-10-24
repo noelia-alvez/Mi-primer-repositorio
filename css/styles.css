@@ -221,3 +221,39 @@ a.custom-card:hover {
   margin-left: 15px;
   float: right;
 }
+
+#mensajeOk {
+  opacity: 1;
+  transition: opacity 20s;
+}
+
+#mensajeOk.fade {
+  opacity: 0;
+}
+
+.alert2{
+  position: fixed;
+  top:30px;
+  width: 50%;
+  left: 50%;
+  height: 35px;
+  transform: translate(-50%, 0);
+  font-size: x-large;
+  text-align: center;
+}
+
+.botModal {
+  background: #9da9b3;
+  width:120px;
+  height: 30px;
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+  color: whitesmoke;
+}
+  .botModal:hover {
+    background-color: #b0b9c0;
+    color: #ffffff;
+  }
