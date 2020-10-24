@@ -3,51 +3,54 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <title>eMercado - Todo lo que busques está aquí</title>
-  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>eMercado - Todo lo que busques está aquí</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-    input[type="submit"] {
-    border: none;
-    outline: none;
-    height: 40px;
-    background: #293bd8;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 5px;
-  }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+
+        input[type="submit"] {
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #293bd8;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 5px;
+        }
   
-    input[type="submit"]:hover {
-    cursor: pointer;
-    background: #3c4de9ce;
-    color: #fff;
-  }
-  </style>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <link href="css/dropzone.css" rel="stylesheet">
-  <link href="css/barra.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+        input[type="submit"]:hover {
+            cursor: pointer;
+            background: #3c4de9ce;
+            color: #fff;
+        }
+
+    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/dropzone.css" rel="stylesheet">
+    <link href="css/barra.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" 
     crossorigin="anonymous">
-  <script>
+    <script>
       if(sessionStorage.getItem("contador") == 0 || sessionStorage.getItem("contador") == null){
         window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
       }
@@ -55,150 +58,289 @@
 </head>
 
 <body>
-  <div id="sidebar" class="site-header sticky-top py-1">
-    <div class="toggle-btn">
-      <span style= "color: rgb(80, 78, 78)">&#9776</span>
-    </div>
-    <img src="img/shopping-online.jpg" class="imgSidebar">
-   
-    <h2 style="text-align: center; color: white; margin-top: 100px;">Bienvenido!</h2>
-      <div class="btn-group">
-        <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" style="margin-bottom: 360px;" aria-haspopup="true" aria-expanded="false">
-          <script>
-            document.write(localStorage.getItem("email"))  // obtengo el dato almacenado en localstorage y lo muestro en pantalla
-          </script>
-        </button>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
-          <a class="dropdown-item" href="cart.html">Mi carrito</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="login.html" id="borrar">Cerrar Sesión
-            <script>
-              document.getElementById("borrar").onclick = function () {
-               sessionStorage.setItem("contador", 0);
-                window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
-              }
-          
-            </script>
-          </a>
+    <div id="sidebar" class="site-header sticky-top py-1">
+        <div class="toggle-btn">
+            <span style= "color: rgb(80, 78, 78)">&#9776</span>
         </div>
-      </div>
-     
-      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='index.html'">Inicio</button>
-      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='categories.html'">Categorías</button>
-      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='products.html'">Productos</button>
-      <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='sell.html'">Vender</button>
-      </div>
-</div>
-  <div class="container mt-5">
-<div class="text-center p-4">
-  <h2>Carrito de compras</h2>
-</div>
-<form onsubmit=compra();>
-<table class="table">
-  <thead>
-  <tr>
-  <th scope="col">Producto</th>
-  <th scope="col" id="name">Nombre</th>
-  <th scope="col" id="cost">Costo</th>
-  <th scope="col" id="count">Cantidad</th>
-  <th scope="col" id="subtTot">Subtotal</th>
-  </tr>
-  </thead>
-  
- <tbody id="articlesWrapper">
-   <td></td>
-   <td headers="nombre name"></td>
-   <td headers="costo cost"></td>
-   <td headers="cantidad count"></td> 
-   <td headers="subtotal subtTot"></td>  
-  </tbody>
- </table>
- 
- <hr class="my-6">
-<div class="d-block my-3">
-  <h3>Tipo de envío</h3>
-      
-  <label>
-    <input type="radio" name="envio" id="premium" required> Premium 2 a 5 días (15%)
-  </label>
-  <br>
-  <label>
-    <input type="radio" name="envio" id="express" required> Express 5 a 8 días (7%)
-  </label>
-  <br>
-  <label>
-    <input type="radio" name="envio" id="standard" required> Standard 12 a 15 días (5%)
-  </label>
-</div>
-<hr class="my-6"> 
-<div class="d-block my-3">
+        <img src="img/shopping-online.jpg" class="imgSidebar">
+        <h2 style="text-align: center; color: white; margin-top: 100px;">Bienvenido!</h2>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger dropdown-toggle menu" data-toggle="dropdown" style="margin-bottom: 360px;" aria-haspopup="true" aria-expanded="false">
+                <script>
+                    document.write(localStorage.getItem("email"))  // obtengo el dato almacenado en localstorage y lo muestro en pantalla
+                </script>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+                <a class="dropdown-item" href="cart.html">Mi carrito</a>
+                <div class="dropdown-divider">
+                </div>
+                <a class="dropdown-item" href="login.html" id="borrar">Cerrar Sesión
+                    <script>
+                        document.getElementById("borrar").onclick = function () {
+                        sessionStorage.setItem("contador", 0);
+                        window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
+                        }
+                    </script>
+                </a>
+            </div>
+        </div>
+        <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='index.html'">Inicio</button>
+        <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='categories.html'">Categorías</button>
+        <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='products.html'">Productos</button>
+        <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='sell.html'">Vender</button>
+    </div>
 
-  <h3>Dirección de envío</h3>
-       
-  <label><p>Calle</p>
-    <input type="text" name="dire" required> 
-  </label>
-  <br>
-  <label><p>Número</p>
-    <input type="text" name="dire" required> 
-  </label>
-  <br>
-  <label><p>Esquina</p>
-    <input type="text" name="dire" required> 
-  </label>
-</div>
-   
-  <hr class="my-6"> 
-  <table class="table">
-   <h3>Costos</h3>
-   <tr>
-   <th scope="col">Subtotal</th>
-   <th scope="col">Costo de envío</th>
-   <th scope="col">Total</th>
-   </tr>
+    <div class="container">
+        <div class="text-center p-4">
+          <h2>Carrito de compras</h2>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-8 order-md-1">
+        <form onKeypress="if (event.keyCode == 13) event.returnValue = false;" class="needs-validation">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col" id="name">Nombre</th>
+                        <th scope="col" id="cost">Costo</th>
+                        <th scope="col" id="count">Cantidad</th>
+                        <th scope="col" id="subtTot">Subtotal</th>
+                        <th scope="col" id="eliminar">Eliminar</th>
+                    </tr>
+                </thead>
 
-  <tbody>
-    <td id="subTotal2"></td>
-    <td id="cDeEnvio"></td> 
-    <td id="total"></td>  
-  </tbody>
-  </table>
+                <tbody id="articlesWrapper">
+                    <td></td>
+                    <td headers="nombre name"></td>
+                    <td headers="costo cost"></td>
+                    <td headers="cantidad count"></td> 
+                    <td headers="subtotal subtTot"></td>  
+                    <td headers="delete eliminar"  id="del" ></td>
+                </tbody>
+            </table>
+            <span id="msjEliminado"></span>
 
-  <hr class="my-6"> 
-  <h3>Forma de pago</h3>
-  <p>no ha seleccionado <a href="#">Seleccionar</a></p>
-  <br>
-  <input class="login-box" type="submit" value="Finalizar compra">
-  <script>
-    function compra() {
-      alert("Has comprado con éxito!");
-    }
-  </script>
+    <hr class="my-6">
+
+    <div class="d-block my-3">
+        <h3>Tipo de envío</h3>
+        <label for="premium">
+            <input type="radio" name="envio" id="premium" checked required=""/>
+            Premium 2 a 5 días (15%)</label>
+        <br>
+        <label for="express">
+            <input type="radio" name="envio" id="express" required=""/>
+            Express 5 a 8 días (7%)</label>
+        <br>
+        <label for="standard">
+            <input type="radio" name="envio" id="standard" required=""/>
+            Standard 12 a 15 días (5%)</label>
+    </div>
+
+    <hr class="my-6"> 
+
+    <div class="d-block my-3">
+        <h3>Dirección de envío</h3>
+        <label for="calle">Calle</label>
+            <input type="text" class="form-control" id="calle">
+            <div class="invalid-feedback">
+                Ingresa la calle
+            </div> 
+    </div>       
+        <br>
+    <div class="d-block my-3">
+        <label for="numero">Número</label>
+            <input type="number" class="form-control" id="numero">
+            <div class="invalid-feedback">
+                Ingresa el número de puerta
+            </div> 
+    </div>        
+        <br>
+    <div class="d-block my-3">
+        <label for="esquina">Esquina</label>
+            <input type="text" class="form-control" id="esquina">
+            <div class="invalid-feedback">
+                Ingresa la esquina
+            </div>
+    </div>
+    
+    <table class="table">
+        <h3>Costos</h3>
+        <tr>
+            <th scope="col">Subtotal</th>
+            <th scope="col">Costo de envío</th>
+            <th scope="col">Total</th>
+        </tr>
+        
+        <tbody>
+            <td id="subTotal2"></td>
+            <td id="cDeEnvio"></td> 
+            <td id="total"></td>  
+       </tbody>
+    </table>
+
+    <hr class="my-6"> 
+
+    <h3>Forma de pago</h3>
+
+    <!-- Button trigger modal -->
+    <div>
+        <strong id="selPago" style="text-align: center;"></strong>  
+        <button type="button" class="botModal" data-toggle="modal" data-target="#exampleModal" id="selectPago">Seleccionar</button>
+    </div>
+
+    <hr class="my-6"> 
+
+    <!-- Modal -->
+    <form>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><b>Forma de pago</b></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default" >
+                        <div class="panel-heading">
+                            <div>
+                                <input type="radio" value="1" name="pago" id="tarjeta"/><b> Tarjeta de crédito</b>
+                                <img src="img/tarjetas.png" style="height: 50px; width:150;" />
+                            </div>
+                                
+                            <br>
+                                
+                            <div class="row ">
+                                <div class="col-md-12">
+                                    <span>Número de la tarjeta
+                                        <input type="number" class="form-control" id="tarjNum"/>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <span class="help-block text-muted small-font" > Mes de vencimiento
+                                    </span>
+                                    <input type="number" min="1" max="12" class="form-control" placeholder="MM" id="tarjMes"/>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <span class="help-block text-muted small-font" >  Año de vencimiento
+                                    </span>
+                                    <input type="number" class="form-control" placeholder="AA" id="tarjAnio" />
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                    <span class="help-block text-muted small-font" >  Código de seguridad
+                                    </span>
+                                    <input type="number" class="form-control" placeholder="CCV" id="tarjCode"/>   
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md-12 pad-adjust">
+                                    <span>Nombre del titular de la tarjeta
+                                    </span>
+                                    <input type="text" class="form-control" required/>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <input type="radio" value="2" name="pago" id="Transferencia"/><b> Transferencia bancaria</b>
+                                <img src="img/logos-bancos.jpg" style="height: 50px; width:150;" />
+                            </div>
+                            <br>
+                            <div class="row ">
+                                <div class="col-md-12 pad-adjust">
+                                    <span>Seleccione su banco
+                                    </span>
+                                    <select>
+                                        <option>---</option>
+                                        <option>Bandes</option>
+                                        <option>BBVA</option>
+                                        <option>BROU</option>
+                                        <option>HSBC</option>
+                                        <option>Itau</option>
+                                        <option>Santander</option>
+                                        <option>Scotianbank</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md-12">
+                                    <span>Documento de Identidad
+                                    <input type="number" class="form-control"/></span>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-md-12">
+                                    <span>Número de cuenta
+                                    <input type="number" class="form-control"/></span>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-md-12">
+                                    <span>Clave
+                                    <input type="password" class="form-control"/></span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12 pad-adjust">
+                                <div class="checkbox">
+                                    <label>
+                                    <input type="checkbox" class="text-muted" required> Acepto los <a href="#">términos y condiciones</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-secondary" value="Cerrar" data-dismiss="modal"></button>
+                        <input type="submit" class="btn btn-primary" value="Guardar cambios" data-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    </form>
+    
+    <input class="btn btn-primary btn-lg" type="submit" value="Finalizar compra" id="finalizarCompra"/>
+    </div>
+    <div id="mensajeOk" style="text-align: center;">
+    </div>
 </div>
 </form>
-<footer class="text-muted">
-  <div class="container">
-    <p class="float-right">
-      <a href="#">Volver arriba</a>
-    </p>
-    <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
-    <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
-  </div>
-</footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Volver arriba</a>
+            </p>
+            <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+            <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+        </div>
+    </footer>
+
+    <div id="spinner-wrapper">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-  </div>
-  <script src="js/barra.js"></script>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/dropzone.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
+
+    <script src="js/barra.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/dropzone.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>
