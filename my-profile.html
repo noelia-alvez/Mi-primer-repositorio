@@ -71,14 +71,106 @@
       <button type="submit" class="menu" style= "margin-bottom: 10px;" onclick="location.href='sell.html'">Vender</button>
       </div>
 </div>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
-  </div>
+  <div class="container p-5 text-center">
+    <div>
+      <div class="text-center p-4">
+        <h2>Mi Perfil</h2>
+    </div> 
+
+    <hr class="my-6">
+
+      <h3><strong>
+        <script>
+          document.write(localStorage.getItem("email"))  // obtengo el dato almacenado en localstorage y lo muestro en pantalla
+        </script>
+        </strong>
+      </h3>
+      
+      <br>
+
+      <form>
+        <div id="mostrarPerfil">
+          <div class="container">
+          <div class="row">
+  
+              <div class="col">
+                  <label for="primerNombre">
+                  <strong>Primer nombre: </strong><input style="width: 400px;" class="form-control" type="text" id="primerNombre"  placeholder="Ingrese su nombre"  />
+                  </label>  
+              <div class="invalid-feedback">
+                    Debe ingresar su nombre
+              </div> 
+              </div>
+        
+              <div class="col" >
+                  <label for="segundoNombre">
+                  <strong>Segundo nombre: </strong><input style="width: 400px;" class="form-control" type="text" id="segundoNombre" placeholder="Ingrese su segundo nombre" />
+              </div>         
+        
+              <div class="col" >
+                  <label for="primerApellido">
+                  <strong>Primer apellido: </strong><input style="width: 400px;" class="form-control" type="text" id="primerApellido" placeholder="Ingrese su apellido"  />
+                  </label>
+              <div class="invalid-feedback">
+                  Debe ingresar su apellido
+              </div> 
+              </div> 
+  
+  
+              <div class="col">
+                  <label for="segundoApellido">
+                  <strong>Segundo apellido:  </strong><input style="width: 400px;" class="form-control" type="text" id="segundoApellido" placeholder="Ingrese su segundo apellido"  />
+                  </label>
+              </div>         
+              
+        
+              <div class="col">
+                  <label for="edad">
+                  <strong>Edad: </strong><input style="width: 400px;" class="form-control" type="number" id="edad" placeholder="Ingrese su edad" />
+                  </label>
+              <div class="invalid-feedback">
+                  Debe ingresar su edad
+              </div> 
+              </div>
+          
+              <div class="col">
+                  <label for="modEmail">
+                  <strong>Correo electrónico: </strong><input style="width: 400px;" class="form-control" type="text" id="modEmail" />
+                  </label>
+              <div class="invalid-feedback">
+                  No puede dejar este campo vacío
+              </div> 
+              </div> 
+  
+              <div class="col">
+                  <label for="tel">
+                  <strong>Teléfono: </strong><input style="width: 400px;" class="form-control" type="number" id="tel" placeholder="Ingrese su teléfono" />
+                  </label>
+              <div class="invalid-feedback">
+                  Debe ingresar un número de teléfono
+              </div> 
+              </div>
+  
+              <div class="col">
+                  <label for="urlImagen">
+                  <strong>Subir imágen de usuario: </strong><input style="width: 400px;" type="text" class="form-control" id="urlImagen" placeholder="pegar URL para imágen de perfil"/>
+                  <br>
+                  <button type="button" class="class="botModal"" id="urlSubirImg"><a href="https://imgbb.com/upload" target="_blank">Subir imágen</a></button> 
+                  </label>
+              </div>  
+      
+              <br>
+      
+              <div class="col">
+                  <label for="guardarCambios" >
+                  <input style="width: 400px; margin-top: 20px" class="btn btn-primary btn-lg" type="submit" onclick="guardarPerfil()" value="Guardar Cambios" id="guardarCambios">
+                  </label>
+              </div>
+            </div>
+        </div>
+        </div>
+    </form>
+    <br>
   <footer class="text-muted bg-light">
     <div class="container">
       <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
