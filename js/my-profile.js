@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     document.getElementById("modEmail").value = correoUsuario;
 
 
-//imprimirResultados();
+imprimirResultados();
 
 });
 
