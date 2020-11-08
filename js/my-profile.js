@@ -1,26 +1,79 @@
 function guardarPerfil() {
 
-var nameOne = document.getElementById("primerNombre").value;
+var nameOne = document.getElementById("primerNombre");
 var nameTwo = document.getElementById("segundoNombre").value;
-var surnameOne = document.getElementById("primerApellido").value;
+var surnameOne = document.getElementById("primerApellido");
 var surnameTwo = document.getElementById("segundoApellido").value;
-var age = document.getElementById("edad").value;
-var phone = document.getElementById("tel").value;
+var age = document.getElementById("edad");
+var phone = document.getElementById("tel");
 
 sessionStorage.setItem("perfilUsuario",
     JSON.stringify(
     {
-    nombre: nameOne,
+    nombre: nameOne.value,
     nombreDos: nameTwo,
-    apellido: surnameOne,
+    apellido: surnameOne.value,
     apellidoDos: surnameTwo,
-    edad: age,
+    edad: age.value,
     correo: localStorage.getItem("email"),
-    tel: phone,
+    tel: phone.value,
     }
     ));
+    nameOne.classList.remove('is-invalid');
+     surnameOne.classList.remove('is-invalid');
+     age.classList.remove('is-invalid');
+     phone.classList.remove('is-invalid');
+     
+    let infoMissing = false;
 
-imprimirResultados();
+    //Se realizan los controles necesarios,
+    //En este caso se controla que se haya ingresado la calle el número de puerta y la esquina.
+
+    //Consulto por el primer nombre
+    if (nameOne.value === "")
+    {
+        nameOne.classList.add('is-invalid');
+        infoMissing = true;
+    }
+    
+    //Consulto por el primer apellido
+    if (surnameOne.value === "")
+    {
+        surnameOne.classList.add('is-invalid');
+        infoMissing = true;
+    }
+
+    //Consulto por la edad
+    if (age.value === "")
+    {
+        age.classList.add('is-invalid');
+        infoMissing = true;
+    }
+
+    //Consulto por el teléfono
+    if (phone.value === "")
+    {
+        phone.classList.add('is-invalid');
+        infoMissing = true;
+    }
+    
+    if(infoMissing === false)
+    {
+                
+            let msgToShowHTML = document.getElementById("mensajeCambios");
+            
+
+            //Si los datos obligatorios están completos muestro mensaje de guardado con éxito
+            
+             
+                document.getElementById("mensajeCambios").classList.add('alert-success');
+                document.getElementById("mensajeCambios").classList.add('alert2');
+                document.getElementById("mensajeCambios").classList.add('fade');
+           
+
+            msgToShowHTML.innerHTML = "Se guardaron los cambios con éxito";
+            document.getElementById("mensajeCambios").classList.add("show");
+    }
 }
 
 
@@ -28,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function(e){
     
     var correoUsuario = localStorage.getItem("email");
     document.getElementById("modEmail").value = correoUsuario;
+    
 
 
 imprimirResultados();
@@ -114,7 +168,7 @@ function imprimirResultados() {
     
             <div class="col">
                 <label for="guardarCambios" >
-                <input style="width: 400px; margin-top: 20px" class="btn btn-primary btn-lg" type="submit" onclick="guardarPerfil()" value="Guardar Cambios" id="guardarCambios">
+                <input style="width: 400px; margin-top: 20px" class="btn btn-primary btn-lg" type="submit" onclick="guardarPerfil();" value="Guardar Cambios" id="guardarCambios">
                 </label>
             </div>
 
