@@ -18,7 +18,17 @@
     <script>
       if(sessionStorage.getItem("contador") == 0 || sessionStorage.getItem("contador") == null){
         window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
-      }
+        sessionStorage.setItem("perfilUsuario",
+          JSON.stringify({
+          nombre: "",
+          nombreDos: "",
+          apellido: "",
+          apellidoDos: "",
+          edad: "",
+          correo: "",
+          tel: "",
+          }))
+        }
     </script>
   </head>
   <body>
@@ -68,8 +78,7 @@
     <div class="text-center p-4">
         <h2>Listado</h2>
     </div>
-    <div class="container">
-      <div class="row">            
+              
           <div class="col text-right">
               <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
                   <label class="btn btn-light active" id="sortAsc" >
@@ -83,7 +92,7 @@
                   </label>
               </div>
           </div>
-      </div>
+      
       <div class="row justify-content-end">
         <div class="col-md-6"></div>
           <div class="col-md-6 col-sm-12 mb-1 container">
@@ -106,14 +115,13 @@
             </div>
           </div>
       </div>
-  </div>
-    <div class="container">
-        <div class="row">
-            <div class="list-group" id="cat-list-container">
+            <div class="container list-group-item">
+            <div class="container row album py-5 bg-light justify-content-center" id="cat-list-container">
             </div>
-        </div>
-    </div>
-    </div>
+              </div>
+               
+              <br>
+
     <footer class="text-muted bg-light">
       <div class="container">
         <p class="float-right">
