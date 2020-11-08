@@ -209,9 +209,9 @@ a.custom-card:hover {
   background-color: whitesmoke;
   border-radius: 10px;
   text-shadow: 1px 1px 1px grey;
-  width: 30%;
-  display: flex;
-  margin:0px 500px 0px 500px;
+  width: 300px;
+  display: inline-block;
+  margin-left: 16%;
   
 }
 
@@ -256,4 +256,13 @@ a.custom-card:hover {
   .botModal:hover {
     background-color: #b0b9c0;
     color: #ffffff;
+  }
+
+  #mensajeCambios {
+    opacity: 1;
+    transition: opacity 20s;
+  }
+  
+  #mensajeCambios.fade {
+    opacity: 0;
   }
