@@ -58,7 +58,17 @@
               document.getElementById("borrar").onclick = function () {
                sessionStorage.setItem("contador", 0);
                 window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
-              }
+                sessionStorage.setItem("perfilUsuario",
+                 JSON.stringify({
+                 nombre: "",
+                 nombreDos: "",
+                 apellido: "",
+                 apellidoDos: "",
+                 edad: "",
+                 correo: "",
+                 tel: "",
+                 }))
+                }
           
             </script>
           </a>
@@ -88,7 +98,7 @@
       
       <br>
 
-      <form>
+      <form onsubmit="return false">
         <div id="mostrarPerfil">
           <div class="container">
           <div class="row">
@@ -155,7 +165,7 @@
                   <label for="urlImagen">
                   <strong>Subir imágen de usuario: </strong><input style="width: 400px;" type="text" class="form-control" id="urlImagen" placeholder="pegar URL para imágen de perfil"/>
                   <br>
-                  <button type="button" class="class="botModal"" id="urlSubirImg"><a href="https://imgbb.com/upload" target="_blank">Subir imágen</a></button> 
+                  <button type="button" class="botModal" id="urlSubirImg"><a href="https://imgbb.com/upload" target="_blank">Subir imágen</a></button> 
                   </label>
               </div>  
       
@@ -163,11 +173,13 @@
       
               <div class="col">
                   <label for="guardarCambios" >
-                  <input style="width: 400px; margin-top: 20px" class="btn btn-primary btn-lg" type="submit" onclick="guardarPerfil()" value="Guardar Cambios" id="guardarCambios">
+                  <input style="width: 400px; margin-top: 20px" class="btn btn-primary btn-lg" type="submit" onclick="guardarPerfil();" value="Guardar Cambios" id="guardarCambios">
                   </label>
               </div>
             </div>
         </div>
+        </div>
+        <div id="mensajeCambios" style="text-align: center;">
         </div>
     </form>
     <br>
