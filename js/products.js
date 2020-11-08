@@ -8,25 +8,22 @@ function showProductsList(array){
         let products = array[i];
 
         htmlContentToAppend += `
-        <a href="https://noelia-alvez.github.io/mi-primer-repositorio/product-info.html" class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-1">`+ products.name +`</h4>
-                            <ul>
-                                <ol class="mb-1">` + products.cost + ` ` + products.currency + `</ol>
-                                <ol class="mb-1">` + products.soldCount + ` vendidos</ol>
-                                
-                            </ul>
-                    </div>
-                     <p> ` + products.description + `<p>
-
-                </div>
+        <div class="col-md-6 card mb-4 shadow-sm">
+            <a href="product-info.html" class=" list-group-item-action">
+    
+            <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
+            <div class="d-flex w-100 justify-content-between">
+                <h4 class="mb-1">`+ products.name +`</h4>
+                    <ul>
+                        <ol class="mb-1">` + products.cost + ` ` + products.currency + `</ol>
+                        <ol class="mb-1">` + products.soldCount + ` vendidos</ol>
+                    
+                    </ul>
             </div>
-        </a>
+            <p> ` + products.description + `<p>
+        
+            </a>
+        </div>
         `
 
         document.getElementById("cat-list-container").innerHTML=htmlContentToAppend;
@@ -102,27 +99,23 @@ function showProductsList(){
         ){
 // se modifica htmlContentToAppend para que coincida con LISTADO de productos
                 htmlContentToAppend += `
-                <a href="https://noelia-alvez.github.io/mi-primer-repositorio/product-info.html" class="list-group-item list-group-item-action">
-                    <div class="row">
-                        <div class="col-3">
-                            <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
-                        </div>
-                        <div class="col">
-                            <div class="d-flex w-100 justify-content-between">
-                                <h4 class="mb-1">`+ products.name +`</h4>
-                                    <ul>
-                                        <ol class="mb-1">` + products.cost + ` ` + products.currency + `</ol>
-                                        <ol class="mb-1">` + products.soldCount + ` vendidos</ol>
-                                
-                                    </ul>
-                                    
-                            </div>
-                             <p> ` + products.description + `<p>
+        <div class="col-md-6 card mb-4 shadow-sm">
+            <a href="product-info.html" class=" list-group-item-action">
+    
+            <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
+            <div class="d-flex w-100 justify-content-between">
+                <h4 class="mb-1">`+ products.name +`</h4>
+                    <ul>
+                        <ol class="mb-1">` + products.cost + ` ` + products.currency + `</ol>
+                        <ol class="mb-1">` + products.soldCount + ` vendidos</ol>
+                    
+                    </ul>
+            </div>
+            <p> ` + products.description + `<p>
         
-                        </div>
-                    </div>
-                </a>
-                `
+            </a>
+        </div>
+        `
         }
 
         document.getElementById("cat-list-container").innerHTML = htmlContentToAppend;
