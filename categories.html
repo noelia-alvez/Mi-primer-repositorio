@@ -45,7 +45,17 @@
                 document.getElementById("borrar").onclick = function () {
                  sessionStorage.setItem("contador", 0);
                   window.location.href="https://noelia-alvez.github.io/mi-primer-repositorio/login.html";
-                }
+                  sessionStorage.setItem("perfilUsuario",
+                  JSON.stringify({
+                    nombre: "",
+                    nombreDos: "",
+                    apellido: "",
+                    apellidoDos: "",
+                    edad: "",
+                    correo: "",
+                    tel: "",
+                   }))
+                 }
             
               </script>
             </a>
