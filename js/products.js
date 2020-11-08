@@ -9,7 +9,7 @@ function showProductsList(array){
 
         htmlContentToAppend += `
         <div class="col-md-6 card mb-4 shadow-sm">
-            <a href="product-info.html" class=" list-group-item-action">
+            <a href="https://noelia-alvez.github.io/mi-primer-repositorio/product-info.html" class=" list-group-item-action">
     
             <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
             <div class="d-flex w-100 justify-content-between">
@@ -100,7 +100,7 @@ function showProductsList(){
 // se modifica htmlContentToAppend para que coincida con LISTADO de productos
                 htmlContentToAppend += `
         <div class="col-md-6 card mb-4 shadow-sm">
-            <a href="product-info.html" class=" list-group-item-action">
+            <a href="https://noelia-alvez.github.io/mi-primer-repositorio/product-info.html" class=" list-group-item-action">
     
             <img src="` + products.imgSrc + `" alt=" " class="img-thumbnail">
             <div class="d-flex w-100 justify-content-between">
